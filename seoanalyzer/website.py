@@ -5,7 +5,7 @@ from xml.dom import minidom
 
 import socket
 
-from seoanalyzer.http import http
+from seoanalyzer import http
 from seoanalyzer.page import Page
 
 class Website():

@@ -2,6 +2,7 @@ import argparse
 import inspect
 import json
 import os
+import site
 
 from jinja2 import Environment
 from jinja2 import FileSystemLoader
@@ -12,13 +13,14 @@ module_path = os.path.dirname(inspect.getfile(analyze))
 
 arg_parser = argparse.ArgumentParser()
 
-arg_parser.add_argument('site', help='URL of the site you are wanting to analyze.')
-arg_parser.add_argument('-s', '--sitemap', help='URL of the sitemap to seed the crawler with.')
-arg_parser.add_argument('-f', '--output-format', help='Output format.', choices=['json', 'html', ],
+arg_parser.add_argument('site', help='http://ananas.rs/')
+arg_parser.add_argument('-s', '--sitemap', help='http://ananas.rs/robots/txt')
+arg_parser.add_argument('-f', '--output-format', help='json', choices=['json', 'html', ],
                         default='json')
 arg_parser.add_argument('-d', '--disk', help='save to disk', choices=['y', 'n', ], default='y')
 
 args = arg_parser.parse_args()
+print("Echo:", args.echo)
 
 output = analyze(args.site, args.sitemap)
 

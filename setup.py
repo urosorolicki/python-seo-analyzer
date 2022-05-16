@@ -13,7 +13,7 @@ setup(
     version='4.0.6',
     description='An SEO tool that analyzes the structure of a site, crawls the site, count words in the body of the site and warns of any technical SEO issues.',
     author='Seth Black',
-    author_email='sblack@sethserver.com',
+    author_email='uros.orolickI@ananas.rs',
     url='https://github.com/sethblack/python-seo-analyzer',
     packages=find_packages(),
     keywords=['search engine optimization', 'seo', 'website parser', 'crawler', 'scraper',],

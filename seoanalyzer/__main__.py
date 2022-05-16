@@ -16,9 +16,9 @@ def main(args=None):
 
         arg_parser = argparse.ArgumentParser()
 
-        arg_parser.add_argument('site', help='URL of the site you are wanting to analyze.')
-        arg_parser.add_argument('-s', '--sitemap', help='URL of the sitemap to seed the crawler with.')
-        arg_parser.add_argument('-f', '--output-format', help='Output format.', choices=['json', 'html', ],
+        arg_parser.add_argument('site', help='https://ananas.rs/')
+        arg_parser.add_argument('-s', '--sitemap', help='https://ananas.rs/robots.txt')
+        arg_parser.add_argument('-f', '--output-format', help='json', choices=['json', 'html', ],
                                 default='json')
 
         args = arg_parser.parse_args()
